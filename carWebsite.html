@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fine Motors</title>
+    <link rel="stylesheet" href="carWebsiteStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+  </head>
+
+  <body>
+    
+    <header>
+      
+      <nav>
+        <div class="navMain">
+            <div class="navHeader">
+                <figure>
+                    <img id="logoImage" src="https://cdn.dribbble.com/userupload/3261442/file/original-79302dac2eb04d0f9aecac39e67b596b.png?compress=1&resize=400x300&vertical=center" alt="car logo">
+                    <figcaption id="logoName">FINE <span id="green">MOTORS</span></figcaption>
+                </figure>
+                
+                <i class="fa-solid fa-bars"></i>
+            </div>
+                <ul class="navBar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Buy</a></li>
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+        </div>
+        <div class="bottomNav">
+
+            
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                
+                <input type="text" placeholder="Search...">
+
+                <button><i class="fa-regular fa-heart"></i></button>
+
+                <button class="open-button" onclick="openForm()">Login</button>
+
+                <div class="form-popup" id="myForm">
+                
+                    <p>Login</p>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <button type="submit" class="btn">Login</button>
+                    <button type="submit" class="btn">Create Account</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </div>
+            
+        </div>
+        
+      </nav>
+
+    </header>
+
+    <h1>What We Do</h1>
+
+    <p>We find you any vehicle that suits your needs and requirements! It's easy to find your perfect vehicle with us by choosing your essential features. We offer some of the best prices in the current market, so what are you waiting for? Your new vehicle awaits!</p>
+
+    <div class="selectionContainer">
+        <h2>Vehicle Search</h2>
+        <div>
+            <form action="#">
+            <div class="dropdownOptions">
+                
+
+                <div id="locations">
+                <label for="location">Location:</label>
+                <br>
+                <select id="location" name="locations">
+                    <option value="all locations">All Locations</option>
+                    <option value="london">London</option>
+                    <option value="north east">North East</option>
+                    <option value="north west">North West</option>
+                    <option value="yorkshire">Yorkshire</option>
+                    <option value="east midlands">East Midlands</option>
+                    <option value="west midlands">West Midlands</option>
+                    <option value="south east">South East</option>
+                    <option value="south west">South West</option>
+                    <option value="east england">East England</option>
+                    <option value="wales">Wales</option>
+                    <option value="scotland">Scotland</option>
+                </select>
+                </div>
+
+                <div id="fuelType">
+                <label for="fuel type">Fuel Type:</label>
+                <br>
+                <select id="fuel type" name="fuel types">
+                    <option value="any fuel">Any Fuel Type</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="petrol">Petrol</option>
+                    <option value="electric">Electric</option>
+                    <option value="hybrid">Hybrid</option>
+                </select>
+                </div>
+
+                <div id="makes">
+                <label for="make">Make:</label>
+                <br>
+                <select id="make" name="makes">
+                    <option value="" select="selected">Any make</option>
+                </select>
+                </div>
+
+                <div id="models">
+                <label for="model">Model:</label>
+                <br>
+                <select id="model" name="models">
+                    <option value="" select="selected">Any Model</option>
+                </select>
+                </div>
+
+                <div id="minPrice">
+                <label for="min price">Minimum Price:</label>
+                <br>
+                <select id="min" name="minimum value">
+                    <option value="any price">Any Price</option>
+                    <option value="500">£500</option>
+                    <option value="1000">£1000</option>
+                    <option value="1500">£1500</option>
+                    <option value="2000">£2000</option>
+                    <option value="3000">£3000</option>
+                    <option value="4000">£4000</option>
+                    <option value="5000">£5000</option>
+                    <option value="6000">£6000</option>
+                    <option value="7000">£7000</option>
+                    <option value="8000">£8000</option>
+                    <option value="9000">£9000</option>
+                    <option value="10000">£10000</option>
+                    <option value="11000">£11000</option>
+                    <option value="12000">£12000</option>
+                    <option value="13000">£13000</option>
+                    <option value="14000">£14000</option>
+                    <option value="15000">£15000</option>
+                    <option value="16000">£16000</option>
+                    <option value="17000">£17000</option>
+                    <option value="18000">£18000</option>
+                    <option value="19000">£19000</option>
+                    <option value="20000">£20000</option>
+                    <option value="25000">£25000</option>
+                    <option value="30000">£30000</option>
+                    <option value="35000">£35000</option>
+                    <option value="40000">£40000</option>
+                    <option value="45000">£45000</option>
+                    <option value="50000">£50000</option>
+                    <option value="55000">£55000</option>
+                    <option value="60000">£60000</option>
+                    <option value="65000">£65000</option>
+                    <option value="70000">£70000</option>
+                    <option value="75000">£75000</option>
+                    <option value="80000">£80000</option>
+                    <option value="85000">£85000</option>
+                    <option value="90000">£90000</option>
+                    <option value="95000">£95000</option>
+                    <option value="100000">£100000</option>
+                    <option value="105000">£105000</option>
+                    <option value="110000">£110000</option>
+                    <option value="115000">£115000</option>
+                    <option value="120000">£120000</option>
+                    <option value="125000">£125000</option>
+                    <option value="130000">£130000</option>
+                    <option value="135000">£135000</option>
+                    <option value="140000">£140000</option>
+                    <option value="145000">£145000</option>
+                    <option value="150000">£150000</option>
+                    <option value="175000">£175000</option>
+                    <option value="200000">£200000</option>
+                    <option value="250000">£250000</option>
+                    <option value="500000">£500000</option>
+                </select>
+                </div>
+
+                <div id="maxPrice">
+                <label for="max price">Maximum Price:</label>
+                <br>
+                <select id="max" name="maximum value">
+                    <option value="any price">Any Price</option>
+                    <option value="500">£500</option>
+                    <option value="1000">£1000</option>
+                    <option value="1500">£1500</option>
+                    <option value="2000">£2000</option>
+                    <option value="3000">£3000</option>
+                    <option value="4000">£4000</option>
+                    <option value="5000">£5000</option>
+                    <option value="6000">£6000</option>
+                    <option value="7000">£7000</option>
+                    <option value="8000">£8000</option>
+                    <option value="9000">£9000</option>
+                    <option value="10000">£10000</option>
+                    <option value="11000">£11000</option>
+                    <option value="12000">£12000</option>
+                    <option value="13000">£13000</option>
+                    <option value="14000">£14000</option>
+                    <option value="15000">£15000</option>
+                    <option value="16000">£16000</option>
+                    <option value="17000">£17000</option>
+                    <option value="18000">£18000</option>
+                    <option value="19000">£19000</option>
+                    <option value="20000">£20000</option>
+                    <option value="25000">£25000</option>
+                    <option value="30000">£30000</option>
+                    <option value="35000">£35000</option>
+                    <option value="40000">£40000</option>
+                    <option value="45000">£45000</option>
+                    <option value="50000">£50000</option>
+                    <option value="55000">£55000</option>
+                    <option value="60000">£60000</option>
+                    <option value="65000">£65000</option>
+                    <option value="70000">£70000</option>
+                    <option value="75000">£75000</option>
+                    <option value="80000">£80000</option>
+                    <option value="85000">£85000</option>
+                    <option value="90000">£90000</option>
+                    <option value="95000">£95000</option>
+                    <option value="100000">£100000</option>
+                    <option value="105000">£105000</option>
+                    <option value="110000">£110000</option>
+                    <option value="115000">£115000</option>
+                    <option value="120000">£120000</option>
+                    <option value="125000">£125000</option>
+                    <option value="130000">£130000</option>
+                    <option value="135000">£135000</option>
+                    <option value="140000">£140000</option>
+                    <option value="145000">£145000</option>
+                    <option value="150000">£150000</option>
+                    <option value="175000">£175000</option>
+                    <option value="200000">£200000</option>
+                    <option value="250000">£250000</option>
+                    <option value="500000+">£500000+</option>
+                </select>
+                </div>
+
+                <div id="minMileage">
+                <label for="min mileage">Minimum Mileage:</label>
+                <br>
+                <select id="min mileage" name="minimum mileage">
+                    <option value="any mileage">Any Mileage</option>
+                    <option value="1000">1000 miles</option>
+                    <option value="2000">2000 miles</option>
+                    <option value="3000">3000 miles</option>
+                    <option value="4000">4000 miles</option>
+                    <option value="5000">5000 miles</option>
+                    <option value="6000">6000 miles</option>
+                    <option value="7000">7000 miles</option>
+                    <option value="8000">8000 miles</option>
+                    <option value="9000">9000 miles</option>
+                    <option value="10000">10000 miles</option>
+                    <option value="12500">12500 miles</option>
+                    <option value="15000">15000 miles</option>
+                    <option value="17500">17500 miles</option>
+                    <option value="20000">20000 miles</option>
+                    <option value="25000">25000 miles</option>
+                    <option value="30000">30000 miles</option>
+                    <option value="35000">35000 miles</option>
+                    <option value="40000">40000 miles</option>
+                    <option value="45000">45000 miles</option>
+                    <option value="50000">50000 miles</option>
+                    <option value="55000">55000 miles</option>
+                    <option value="60000">60000 miles</option>
+                    <option value="65000">65000 miles</option>
+                    <option value="70000">70000 miles</option>
+                    <option value="75000">75000 miles</option>
+                    <option value="80000">80000 miles</option>
+                    <option value="85000">85000 miles</option>
+                    <option value="90000">90000 miles</option>
+                    <option value="95000">95000 miles</option>
+                    <option value="100000">100000 miles</option>
+                </select>
+                </div>
+                
+                <div id="maxMileage">
+                <label for="max mileage">Maximum Mileage:</label>
+                <br>
+                <select id="max mileage" name="maximum mileage">
+                    <option value="any mileage">Any Mileage</option>
+                    <option value="1000">1000 miles</option>
+                    <option value="2000">2000 miles</option>
+                    <option value="3000">3000 miles</option>
+                    <option value="4000">4000 miles</option>
+                    <option value="5000">5000 miles</option>
+                    <option value="6000">6000 miles</option>
+                    <option value="7000">7000 miles</option>
+                    <option value="8000">8000 miles</option>
+                    <option value="9000">9000 miles</option>
+                    <option value="10000">10000 miles</option>
+                    <option value="12500">12500 miles</option>
+                    <option value="15000">15000 miles</option>
+                    <option value="17500">17500 miles</option>
+                    <option value="20000">20000 miles</option>
+                    <option value="25000">25000 miles</option>
+                    <option value="30000">30000 miles</option>
+                    <option value="35000">35000 miles</option>
+                    <option value="40000">40000 miles</option>
+                    <option value="45000">45000 miles</option>
+                    <option value="50000">50000 miles</option>
+                    <option value="55000">55000 miles</option>
+                    <option value="60000">60000 miles</option>
+                    <option value="65000">65000 miles</option>
+                    <option value="70000">70000 miles</option>
+                    <option value="75000">75000 miles</option>
+                    <option value="80000">80000 miles</option>
+                    <option value="85000">85000 miles</option>
+                    <option value="90000">90000 miles</option>
+                    <option value="95000">95000 miles</option>
+                    <option value="100000+">100000+ miles</option>
+                </select>
+                </div>
+                
+                <br>
+
+                <div id="submitButton">
+                <button class="findCars" type="submit">Search</button>
+                </div>
+
+            </div>
+
+            
+        </div>
+    </form>
+    </div>
+
+    <div class="topDealsSection">
+        <h3>Top Deals</h3>
+
+        <div id="LandRover" class="topDeals">
+            <img src="./images/LandRoverDefender.jpeg" alt="Land Rover">
+            <p  class="topText">
+                Land Rover - Defender <br> Mileage : 84,088 <br> Price : £27,990
+            </p>
+        </div>
+
+        <div id="Ford" class="topDeals">
+            <img src="./images/Ford.jpg" alt="Ford">
+            <p class="topText">
+                Ford - Fiesta <br> Mileage : 99,015 <br> Price : £4,989
+            </p>
+        </div>
+
+        <div id="FordE" class="topDeals">
+            <img src="./images/Ford E.jpg" alt="Ford E">
+            <p class="topText">
+                Ford - Ecosport <br> Mileage : 37,250 <br> Price : £13,250
+            </p>
+        </div>
+
+        <div id="Toyota" class="topDeals">
+            <img src="./images/Toyota.jpg" alt="Toyota">
+            <p class="topText">
+                Toyota - Aygo <br> Mileage : 7,965 <br> Price : £12,999
+            </p>
+        </div>
+
+    </div>
+
+    <div class="popularSection">
+        <h3>Popular</h3>
+
+        <div id="Audi" class="popular">
+            <img src="./images/Audi A3.jpg" alt="Audi">
+            <p class="popularText">
+                Audi - A3 <br> Mileage : 37,904 <br> Price : £19,999
+            </p>
+        </div>
+
+        <div id="Vauxhall" class="popular">
+            <img src="./images/Vauxhall.jpg" alt="Vauxhall">
+            <p class="popularText">
+                Vauxhall - Astra <br> Mileage : 20,229 <br> Price : £9,999
+            </p>
+        </div>
+
+        <div id="BMW" class="popular">
+            <img src="./images/BMW 3.jpg" alt="BMW">
+            <p class="popularText">
+                BMW - 3 Series <br> Mileage : 95,000 <br> Price : £7,890
+            </p>
+        </div>
+
+        <div id="MercedeesBenzC" class="popular">
+            <img src="./images/Mercedees.jpg" alt="Mercedees Benz C">
+            <p class="popularText">
+                Mercedees Benz - C Class <br> Mileage : 49,050 <br> Price : £11,222
+            </p>
+        </div>
+
+    </div>
+    
+
+    <h3>Browse By Make</h3>
+    <div class="makes">
+        
+        <div class="makeLogos" id="audiLogo">
+            <img class="clickBrand" src="./images/Audi.png" alt="Audi">
+        </div>
+        <div class="makeLogos" id="fordLogo">
+            <img class="clickBrand" src="./images/Ford.png" alt="Ford">
+        </div>
+        <div class="makeLogos" id="mercLogo">
+            <img class="clickBrand" src="./images/Merc.png" alt="Mercedees Benz">
+        </div>
+        <div class="makeLogos" id="volkswagenLogo">
+            <img class="clickBrand" src="./images/VW.png" alt="Volkswagen">
+        </div>
+        </div>
+    </div>
+
+    <h4>Reviews</h4>
+
+    <div class="reviewsContainer">
+        <div class="reviews">
+            <img class="userPhoto" src="" alt="user image">
+            
+            <div class="textBox">
+            <p class="reviewText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente in aliquam reprehenderit fugiat odit ipsum incidunt vitae recusandae inventore adipisci, blanditiis quo quis, ab magnam fugit animi. Et, reprehenderit beatae.</p>
+            <h5 class="username">Doe J</h5>
+            </div>
+
+            <img class="carBought" src="" alt="car bought">
+        </div>
+    </div>
+
+
+<footer>
+    <div class="footerSection">
+        <div class="row">
+          <div class="footerColumn">
+            <h6>fine motors</h6>
+            <ul>
+              <li><a href="#">support</a></li>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">terms and conditions</a></li>
+              <li><a href="#">advertising</a></li>
+              <li><a href="#">security</a></li>
+            </ul>
+          </div>
+          <div class="footerColumn">
+            <h6>services</h6>
+            <ul>
+              <li><a href="#">free valuation</a></li>
+              <li><a href="#">sell your car</a></li>
+              <li><a href="#">finance</a></li>
+              <li><a href="#">insurance</a></li>
+              <li><a href="#">warranty</a></li>
+            </ul>
+          </div>
+          <div class="footerColumn">
+            <h6>get help</h6>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">contact us</a></li>
+              <li><a href="#">reviews</a></li>
+              <li><a href="#">leave a review</a></li>
+              <li><a href="#">collection locations</a></li>
+            </ul>
+          </div>
+          <div class="footerColumn">
+            <h6>follow us</h6>
+            <div class="socials">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+       </div>
+
+</footer>
+
+
+    <script src="carWebsite.js"></script>
+  </body>
+</html>

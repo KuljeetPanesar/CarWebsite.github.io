@@ -1,0 +1,850 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: whitesmoke;
+    line-height: 2.2;
+    font-size: 0.875rem;
+}
+#logoImage {
+    width: 300px; height: 225px; object-fit: none;
+    border-radius: 10%;
+}
+
+#logoName {
+    text-align: center;
+    color: #d64933;
+    font-family: "Audiowide", sans-serif;
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+#green {
+    color: #248232;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+nav {
+    background-color: rgb(35, 38, 31);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.fa-bars {
+    color: #d64933;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.fa-bars:hover {
+    color: rgb(171, 166, 166);
+}
+
+.navBar a {
+    color: rgb(171, 166, 166);
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    display: block;
+    margin-left: -25px;
+    transition: all 0.3s linear;
+}
+
+.navBar a:hover {
+    background-color: rgb(171, 166, 166);
+    color: rgb(35, 38, 31);
+    padding-left: 1.5rem;
+}
+
+.navBar {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+
+.navBar.expanded {
+    height: auto;
+    padding: 2rem 0;
+}
+
+.showNavBar {
+    height: auto;
+}
+
+.navHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+.bottomNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(35, 38, 31);
+    padding: 10px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.bottomNav input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    color: rgb(129, 14, 14);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 80%;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.fa-magnifying-glass, .fa-heart {
+    color: #d64933;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: color 0.3s linear;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.fa-magnifying-glass:hover, .fa-heart:hover {
+  color: rgb(171, 166, 166);
+}
+
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: white;
+    color: #d64933;
+    font-family: cursive;
+    font-weight: 600;
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+    position: top;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-right: 10px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    background-color: #248232;
+    color: #353831;
+    font-weight: 800;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: white;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: white;
+    outline: none;
+  }
+  
+  /* Set a style for the login button */
+  .form-container .btn {
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    color: rgb(171, 166, 166);
+    opacity: 0.6;
+  }
+
+
+/* Intro */
+
+h1{
+    font-size: 30px;
+    margin: 30px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px;
+}
+
+
+
+/* Vehicle selections */
+
+.selectionContainer {
+    background-image: url(./images/carBackgroundImage.jpg);
+    opacity: 0.8;
+    height: 700px;
+    color: rgb(171, 166, 166);
+}
+
+h2 {
+    font-size:40px;
+    margin: 30px;
+}
+
+select {
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dropdownOptions {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 5px;
+
+}
+
+.dropdownOptions div {
+    text-align: center;
+    font-size: 25px;
+}
+
+
+#locations {
+    grid-column: 1/2;
+}
+
+#fuelType {
+    grid-column: 2/3;
+}
+
+#makes {
+    grid-column: 1/2;
+}
+
+#models {
+    grid-column: 2/3;
+}
+
+#minPrice {
+    grid-column: 1/2;
+}
+
+#maxPrice {
+    grid-column: 2/3;
+}
+
+#minMileage {
+    grid-column: 1/2;
+}
+
+#maxMileage {
+    grid-column: 2/3;
+}
+
+#submitButton {
+    grid-column: 1/3;
+}
+
+.findCars {
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* Quick search rows */
+
+h3 {
+    font-size: 30px;
+    margin: 30px;
+}
+
+/* Top Deals */
+.topDealsSection {
+    height: 480px;
+}
+
+.topDeals {
+    vertical-align: top;
+    text-align: center;
+    width: 24%;
+    cursor: pointer;
+    float: left;
+    border: 3px solid white;
+}
+
+.topDeals:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.topDeals img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+
+.topText {
+    display: block;
+}
+
+/* Popular */
+.popularSection {
+    height: 480px;
+}
+.popular {
+    vertical-align: top;
+    text-align: center;
+    width: 24%;
+    cursor: pointer;
+    float: left;
+    border: 3px solid white;
+}
+
+.popular:after{
+    box-sizing: border-box;
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.popular:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popular img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+
+.popularText {
+    display: block;
+}
+
+
+
+/*Makes*/
+.makeLogos {
+    float: left;
+    width: 24%;
+    border: 3px solid white;
+}
+
+.makes:after {
+    box-sizing: border-box;
+    content: "";
+    clear: both;
+    display: table;
+
+}
+
+.makeLogos img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+
+.clickBrand {
+    cursor: pointer;
+}
+
+.clickBrand:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* Reviews Section */
+
+h4 {
+    font-size: 25px;
+    margin: 30px;
+}
+
+.reviewsContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.reviews {
+    width: 100%;
+    height: 175px;
+    background-color: rgb(35, 38, 31);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    min-width: 400px;
+    padding: 70px 20px;
+    margin: 5px;
+    color: white;
+    position: relative;
+}
+
+.username {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.userPhoto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute; /* brings to the top*/
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+}
+
+.reviewText {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.textBox{
+    width: 48%;
+    height: 100%;
+    text-align: justify;
+    overflow: auto;
+    float: left;
+}
+
+.carBought {
+    float: right;
+    width: 48%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+/* Footer */
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+  footer{
+    background-color: #353831;
+    padding: 70px 0;
+  }
+  .footerColumn{
+     width: 23%;
+     padding: 0 8px;
+  }
+  .footerColumn h6{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footerColumn h6::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #248232;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footerColumn ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footerColumn ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footerColumn ul li a:hover{
+    color: #9e2b25;
+    padding-left: 8px;
+  }
+  .footerColumn .socials a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footerColumn .socials a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+
+
+
+
+
+  /* Responsiveness */
+
+/* Specific to nav bar for all screens*/
+@media (min-width: 1300px) {
+    .navMain {
+        flex-wrap: nowrap;
+        max-width: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    .navHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .fa-bars {
+        display: none;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .navBar {
+        height: auto;
+        display: flex;
+    }
+
+    .navBar a {
+        padding: 0;
+        margin: 0.5rem;
+    }
+
+    .navBar a:hover {
+        padding: 0;
+        background: transparent;
+        color: #248232;
+    }
+
+}
+
+
+/* tablet screen */
+@media only screen and (max-width: 740px) {
+
+    /* grid alteration */
+    .selectionContainer {
+        background-image: url(./images/carBackgroundImage.jpg);
+        opacity: 0.8;
+        height: 700px;
+        color: rgb(171, 166, 166);
+    }
+    
+    h2 {
+        font-size:40px;
+        margin: 30px;
+    }
+    
+    select {
+        font-size: 22px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .dropdownOptions {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 5px;
+    
+    }
+    
+    .dropdownOptions div {
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    
+    #locations {
+        grid-column: 1/2;
+    }
+    
+    #fuelType {
+        grid-column: 2/3;
+    }
+    
+    #makes {
+        grid-column: 1/2;
+    }
+    
+    #models {
+        grid-column: 2/3;
+    }
+    
+    #minPrice {
+        grid-column: 1/2;
+    }
+    
+    #maxPrice {
+        grid-column: 2/3;
+    }
+    
+    #minMileage {
+        grid-column: 1/2;
+    }
+    
+    #maxMileage {
+        grid-column: 2/3;
+    }
+    
+    #submitButton {
+        grid-column: 1/3;
+    }
+    
+    .findCars {
+        font-size: 22px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    /* top deals row */
+    #Toyota{
+        display: none;
+    }
+    
+    .topDeals {
+        vertical-align: top;
+        text-align: center;
+        width: 32%;
+        cursor: pointer;
+        float: left;
+        border: 3px solid white;
+    }
+
+    /* popular row */
+    #MercedeesBenzC{
+        display: none;
+    }
+
+    .popular {
+        vertical-align: top;
+        text-align: center;
+        width: 32%;
+        cursor: pointer;
+        float: left;
+        border: 3px solid white;
+    }
+
+    /* browse by brands row */
+
+    #audiLogo{
+        display: none;
+    }
+    .makeLogos {
+        float: left;
+        width: 32%;
+        border: 3px solid white;
+    }
+
+    /* footer */
+    .footerColumn{
+        width: 40%;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+/* mobile screen */
+@media only screen and (max-width: 500px) {
+
+    /* grid alteration */
+    .selectionContainer {
+        background-image: url(./images/carBackgroundImage.jpg);
+        opacity: 0.8;
+        height: 1150px;
+        color: rgb(171, 166, 166);
+    }
+    
+    h2 {
+        font-size:30px;
+        margin: 30px;
+    }
+    
+    select {
+        font-size: 16px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .dropdownOptions {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 5px;
+    
+    }
+
+    .dropdownOptions {
+        display: grid;
+        grid-template-columns: auto;
+    
+    }
+    
+    .dropdownOptions div {
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    
+    #locations {
+        grid-column: 1/2;
+    }
+    
+    #fuelType {
+        grid-column: 1/2;
+    }
+    
+    #makes {
+        grid-column: 1/2;
+    }
+    
+    #models {
+        grid-column: 1/2;
+    }
+    
+    #minPrice {
+        grid-column: 1/2;
+    }
+    
+    #maxPrice {
+        grid-column: 1/2;
+    }
+    
+    #minMileage {
+        grid-column: 1/2;
+    }
+    
+    #maxMileage {
+        grid-column: 1/2;
+    }
+    
+    #submitButton {
+        grid-column: 1/2;
+    }
+
+    .findCars {
+        font-size: 16px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    /* top deals row */
+    #Ford{
+        display: none;
+    }
+    #FordE{
+        display: none;
+    }
+    #Toyota{
+        display: none;
+    }
+    
+    .topDeals {
+        vertical-align: top;
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+        float: left;
+        border: 3px solid white;
+    }
+
+    /* popular row */
+    #Vauxhall {
+        display: none;
+    }
+    #BMW{
+        display: none;
+    }
+    #MercedeesBenzC{
+        display: none;
+    }
+
+    .popular {
+        vertical-align: top;
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+        float: left;
+        border: 3px solid white;
+    }
+
+    /* browse by brands row */
+    #fordLogo{
+        display: none;
+    }
+    #mercLogo{
+        display: none;
+    }
+    #audiLogo{
+        display: none;
+    }
+    .makeLogos {
+        float: left;
+        width: 100%;
+        border: 3px solid white;
+    }
+    
+    /* reviews removal */
+    h4 {
+        display: none;
+    }
+    
+    .reviewsContainer {
+        display: none;
+    }
+
+
+    /* footer */
+    .footerColumn{
+        width: 100%;
+    }
+
+}
