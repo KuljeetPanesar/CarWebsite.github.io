@@ -577,7 +577,7 @@ ul {
 
     /* grid alteration */
     .selectionContainer {
-        background-image: url(./images/carBackgroundImage.jpg);
+        background-image: url(./carBackgroundImage.jpg);
         opacity: 0.8;
         height: 700px;
         color: rgb(171, 166, 166);
@@ -700,7 +700,7 @@ ul {
 
     /* grid alteration */
     .selectionContainer {
-        background-image: url(./images/carBackgroundImage.jpg);
+        background-image: url(./carBackgroundImage.jpg);
         opacity: 0.8;
         height: 1150px;
         color: rgb(171, 166, 166);
